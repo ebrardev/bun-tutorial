@@ -38,10 +38,12 @@ const server = Bun.serve({
   },
 
 ```
-  ## simple route
-      // return new Response("Bun bun dsklds!");
+  ## Simple Route
+  ```javascript
+      // return new Response("Bun bun hello!");
       const url= new URL(req.url);
       if(url.pathname === "/")   return new Response("Home page");
+      ```
 
  ## node modules
  import path from 'path';
