@@ -44,7 +44,7 @@ const server = Bun.serve({
       const url= new URL(req.url);
       if(url.pathname === "/")   return new Response("Home page");
       ```
-
+},
  ## node modules
  import path from 'path';
 
