@@ -9,7 +9,7 @@
 ### Start
 `  bun run index.ts `
 
-### Create Server
+### Create server
 ```javascript
 const server = Bun.serve({
     port: 3000,
@@ -20,12 +20,12 @@ const server = Bun.serve({
 
   console.log(`Listening on http://localhost:${server.port} ...`);
   ```
-  ### Watch Mode
+  ### Watch mode
 `    bun --watch index.ts `
   ## Hot Mode
   `   bun --hot index.ts`
 
-  ### Enviroment Variables
+  ### Enviroment variables
   no need install dotenv packages
 
   ### Scripts
@@ -38,23 +38,29 @@ const server = Bun.serve({
   },
 
 ```
-  ## Simple Route
-  ```javascript
-      // return new Response("Bun bun hello!");
+  ## Simple route
+ 
+```javascript
       const url= new URL(req.url);
       if(url.pathname === "/")   return new Response("Home page");
-      ```
-},
- ## node modules
- import path from 'path';
+  },
+
+```
+
+ ## Node modules
+```javascript
+   import path from 'path';
 
 
 const filepath = path.join("src", "modules", "index.ts");
 const filename = path.basename(filepath);
 console.log(filename)
 
-## file I/O
-const data = "lorem ipsum dolor sit amet"
+```
+
+## File I/O
+```javascript
+   const data = "lorem ipsum dolor sit amet"
 
 await Bun.write("index.html", data)
 
@@ -65,15 +71,23 @@ console.log(await file.slice(0, 5))
 console.log(await file.stream())
 console.log(await file.arrayBuffer())
 
-## bun test
-import {describe,expect,test,beforeAll} from "bun:test";
+```
 
-## bundler
-bun build ./src/index.ts --outfile=./dist/bundle.js
 
-## bundler watch mode
-bun build ./src/index.ts --outfile=./dist/bundle.js --watch
+## Bun test
+`import {describe,expect,test,beforeAll} from "bun:test";`
+
+## Bundler
+
+`bun build ./src/index.ts --outfile=./dist/bundle.js`
+
+## Bundler watch mode
+
+`bun build ./src/index.ts --outfile=./dist/bundle.js --watch`
 
 ## react & jsx 
+
+```javascript
 app.tsx
 bun install react  react-dom 
+```

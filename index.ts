@@ -1,7 +1,7 @@
 const server = Bun.serve({
     port: Bun.env.PORT || 8080,
     fetch(req) {
-      // return new Response("Bun bun dsklds!");
+      // return new Response("Bun bun world!");
       const url= new URL(req.url);
       if(url.pathname === "/")   return new Response("Home page");
       
