@@ -14,7 +14,7 @@
 const server = Bun.serve({
     port: 3000,
     fetch(req) {
-      return new Response("Bun bun bunnn!");
+      return new Response("Bun bun hello!");
     },
   });
 
@@ -25,15 +25,19 @@ const server = Bun.serve({
   ## Hot Mode
   `   bun --hot index.ts`
 
-  ## enviroment variables
+  ### Enviroment Variables
   no need install dotenv packages
 
-  ## scripts
-   "scripts": {
+  ### Scripts
+ 
+```javascript
+  "scripts": {
     "dev": "bun --watch  index.ts",
     "start": "bun run index.ts"
 
   },
+
+```
   ## simple route
       // return new Response("Bun bun dsklds!");
       const url= new URL(req.url);
